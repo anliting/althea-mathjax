@@ -1,0 +1,12 @@
+require.js('https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML',()=>{
+    MathJax.Hub.Config({
+        tex2jax:{
+            skipTags:['script','noscript','style','textarea','pre','code'],
+            ignoreClass:['bordered'],
+        },
+        messageStyle:'none',
+    })
+    blog.addEventListener('pageContentLoad',()=>{
+        MathJax.Hub.Queue(['Typeset',MathJax.Hub])
+    })
+})
