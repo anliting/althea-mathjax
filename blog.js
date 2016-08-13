@@ -1,4 +1,4 @@
-require.js('https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML',()=>{
+module.scriptByPath('https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML').then(()=>{
     MathJax.Hub.Config({
         tex2jax:{
             skipTags:['script','noscript','style','textarea','pre','code'],
