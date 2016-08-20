@@ -6,7 +6,7 @@ module.scriptByPath('https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=Te
         },
         messageStyle:'none',
     })
-    blog.addEventListener('pageContentLoad',()=>{
+    blog.on('pageContentLoad',()=>{
         MathJax.Hub.Queue(['Typeset',MathJax.Hub])
     })
 })
