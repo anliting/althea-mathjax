@@ -1,12 +1,20 @@
-module.scriptByPath('https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML').then(()=>{
+(async()=>{
+    await module.scriptByPath('https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML')
     MathJax.Hub.Config({
         tex2jax:{
-            skipTags:['script','noscript','style','textarea','pre','code'],
+            skipTags:[
+                'script',
+                'noscript',
+                'style',
+                'textarea',
+                'pre',
+                'code'
+            ],
             ignoreClass:['bordered'],
         },
         messageStyle:'none',
     })
-    this.on('pageContentLoad',()=>{
+    this.on('pageContentLoad',()=>
         MathJax.Hub.Queue(['Typeset',MathJax.Hub])
-    })
-})
+    )
+})()
