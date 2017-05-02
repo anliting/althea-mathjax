@@ -1,5 +1,5 @@
 (async()=>{
-    await module.scriptByPath('https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML')
+    await module.scriptByPath('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML')
     MathJax.Hub.Config({
         tex2jax:{
             skipTags:[
