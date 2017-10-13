@@ -14,7 +14,7 @@
         },
         messageStyle:'none',
     })
-    this.on('pageContentLoad',()=>
+    this.addPagePlugin(()=>
         MathJax.Hub.Queue(['Typeset',MathJax.Hub])
     )
 })()
