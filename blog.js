@@ -1,4 +1,4 @@
-(async()=>{
+;(async()=>{
     await module.scriptByPath('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML')
     MathJax.Hub.Config({
         tex2jax:{
@@ -14,7 +14,7 @@
         },
         messageStyle:'none',
     })
-    this.addPagePlugin(()=>
-        MathJax.Hub.Queue(['Typeset',MathJax.Hub])
+    this.addPagePlugin(div=>
+        MathJax.Hub.Queue(['Typeset',MathJax.Hub,div])
     )
 })()
