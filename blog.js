@@ -1,1 +1,1 @@
-/plugins/althea-mathjax/blog.js
+/plugins/mathjax/blog.js
