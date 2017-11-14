@@ -1,6 +1,6 @@
-import{moduleLoader}from'/lib/core.static.js'
+import{load}from'/lib/core.static.js'
 export default async blog=>{
-    let module=await moduleLoader()
+    let module=await load.module()
     await module.scriptByPath('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML')
     MathJax.Hub.Config({
         tex2jax:{
